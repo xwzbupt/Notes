@@ -9,5 +9,5 @@
 ![](https://img.shields.io/badge/%E6%91%B8%E9%B1%BC-%E7%A8%8B%E5%BA%8F%E5%91%98-green)
 
 [GitHub](https://github.com/xwzbupt/AlgorithmNotes)
-[开始阅读](?id=headline)
+[开始阅读](?id=算法专项笔记)
 
