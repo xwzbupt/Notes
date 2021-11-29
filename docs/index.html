@@ -2,95 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>算法专项笔记</title>
+  <title>docsify文档</title>
+
+  <!-- 解除其他平台的防盗链 -->
+  <meta name="referrer" content="never">
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-  <!-- 公式插件 -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+  <link rel="stylesheet" type="text/css" href="style/myStyle.css"/>
 
+  <!-- alert -->
+  <link rel="stylesheet" href="//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
 
 </head>
-<body>
-  <div id="app"></div>
+
+<body background="" style=" background-repeat:no-repeat ;background-size:100% 100%;background-attachment: fixed;">
+  <div id="app">Loading...</div>
+  <a class="to-top">Top</a>
+
   <script>
     window.$docsify = {
-      name: '算法专项笔记',
+      el: '#app',
+      name: '编写docsify文档',
       repo: 'https://github.com/xwzbupt/AlgorithmNotes',
-      loadSidebar: true,
-      subMaxLevel: 3,
-      coverpage: true,
-      loadNavbar: true,
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md',
-      },
-      sidebarDisplayLevel: 3, // set sidebar display level
-         
-    search: 'auto', // 默认值
-    search : [
-      '/',            // => /README.md
-      '/guide',       // => /guide.md
-      '/get-started', // => /get-started.md
-      '/zh-cn/',      // => /zh-cn/README.md
-    ],
+      loadNavbar: true, //开启导航栏
+      coverpage: true,  //开启封面
+      loadSidebar: true,//开启侧边栏
+      auto2top: true,   //切换页面自动回到顶部
+      subMaxLevel: 2,   //目录最大级数
+      maxLevel: 4,      //可配置最大支持渲染的标题层级
+      homepage: 'zh-cn/README.md', //设置中文的README.md作为首页
+      
+      //添加搜索功能，中文和英文文档同时搜索
+      search: {
+        paths: 'auto',
+        placeholder: {
+          '/':'🔍 搜索',
+          '/zh-cn/':'🔍 搜索',
+          '/en-us/':'🔍 Type to search'
+        },
+        //如果中文和英文文档都没有内容，则返回
+        noData: {
+          '/':'😒 找不到结果',
+          '/zh-cn/':'😒 找不到结果',
+          '/en-us/':'😒 No Results'
+        },
+  
+        depth: 4,         //搜索标题的最大层级
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },//增加搜索框
 
-    // 完整配置参数
-    search: {
-      maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-      paths: [], // or 'auto'
-      placeholder: 'Type to search',
-
-      // 支持本地化
-      placeholder: {
-        '/zh-cn/': '搜索',
-        '/': 'Type to search'
-      },
-
-      noData: 'No Results!',
-
-      // 支持本地化
-      noData: {
-        '/zh-cn/': '找不到结果',
-        '/': 'No Results'
+      footer: {
+        copy: 'Copyright &copy; 2021 💖 </span>',
+        auth: ' <strong>-相依-</strong>',
+        pre: '<hr/>',
+        style: 'text-align: center;',
       },
 
-      // 搜索标题的最大层级, 1 - 6
-      depth: 3,
+      copyCode: {
+          buttonText: 'Copy',
+          errorText: 'Error',
+          successText: 'OK!'
+      },
 
-      hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
-
-      // 避免搜索索引冲突
-      // 同一域下的多个网站之间
-      namespace: 'website-1',
-
-      // 使用不同的索引作为路径前缀（namespaces）
-      // 注意：仅适用于 paths: 'auto' 模式
-      //
-      // 初始化索引时，我们从侧边栏查找第一个路径
-      // 如果它与列表中的前缀匹配，我们将切换到相应的索引
-      pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
-
-      // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
-      // 匹配到的字符串将被用来识别索引
-      pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+      'flexible-alerts': {
+        style: 'flat'
       }
-  }
+   
+    }
   </script>
 
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify"></script>
-  <!-- 公式插件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-  <!-- 复制到剪贴板插件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- 分页导航插件 -->
-  <!--Java高亮  -->
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-java.min.js"></script>
-  <!-- plugins -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
+  <!-- docsify表情包 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  
+  <!-- 复制代码到剪切板 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+
+  <!-- 搜索功能 -->
+  <script src="//cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
+
+  <!-- C++、Java、python、bash等等语法高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-powershell.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/matlab.min.js"></script>
+  
+  <!-- CDN files for docsify-katex -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  
+  <!-- 文档页脚增强 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-footer-enh/dist/docsify-footer.min.js"></script>
+  
+  <!-- 复制提醒 -->
+  <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <script>
+    document.body.oncopy = function () { 
+      swal("复制成功 🎉", 
+        "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 Github 给个 star 吧 😊", 
+        "success"); };
+  </script>
+
+  <!-- PWA 离线化 -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
+  
+  <!-- 访问量统计 -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            
+
+  <!-- 置顶插件 -->
+  <script src="style/jquery-1.11.3.min.js"></script>
+  <script src="style/jquery.toTop.min.js"></script>
+  <script>
+    $('.to-top').toTop();
+  </script>
+
+  <!-- Markdown 引用样式美化 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts/dist/docsify-plugin-flexible-alerts.min.js"></script>
+
+  <!-- 图片缩放 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.js"></script>
+
+  <!-- 侧边栏折叠 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>
