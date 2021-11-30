@@ -1,4 +1,4 @@
 - [主页](/)
 - 翻译
     - [中文](/zh-cn/README.md)
-    - [英文](/en-us)
+    - [英文](/en-us/README.md)
