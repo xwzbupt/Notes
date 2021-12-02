@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>docsify文档</title>
+  <title>学习笔记</title>
 
   <!-- 解除其他平台的防盗链 -->
   <meta name="referrer" content="never">
@@ -11,7 +11,7 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
-  <link rel="stylesheet" type="text/css" href="style/myStyle.css"/>
+  <link rel="stylesheet" type="text/css" href="style/myStyle-light.css"/>
 
   <!-- alert -->
   <link rel="stylesheet" href="//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
@@ -167,6 +167,16 @@
 
   <!-- 分页插件 -->
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+  <!-- 置顶插件 -->
+  <script src="style/jquery-1.11.3.min.js"></script>
+  <script src="style/jquery.toTop.min.js"></script>
+  <script>
+    $('.to-top').toTop();
+  </script>
+
+   <!-- Markdown 引用样式美化 -->
+   <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
 
 </body>
 </html>

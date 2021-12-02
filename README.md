@@ -1,3 +1,3 @@
-# AlgorithmNotes
+# 算法专项笔记
 
-[访问在线笔记](https://xwzbupt.github.io/AlgorithmNotes/)
+> 这是一个算法分专项的笔记，支持在线查看。左侧为目录，可以点击目录查看。
