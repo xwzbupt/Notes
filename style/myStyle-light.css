@@ -56,9 +56,11 @@ section.cover .cover-main {
 .app-nav {
     position: fixed !important;
 }
-/* 内容居中和宽度 */
+/* 内容居中和宽度
+   内容的左边距和右边距在此调整
+*/
 .content{
-    width:1000px;
+    width:1150px;
     margin: 0 auto;
     padding-top: 70px !important;
 }
