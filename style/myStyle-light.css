@@ -60,7 +60,7 @@ section.cover .cover-main {
    内容的左边距和右边距在此调整
 */
 .content{
-    width:1150px;
+    width:1200px;
     margin: 0 auto;
     padding-top: 70px !important;
 }
@@ -224,7 +224,7 @@ section.cover.has-mask .mask {
     content: '';
     display: block;
     background: url(https://files.mdnice.com/point.png);
-    height: 30px;
+    height: 0px;
     width: 100%;
     background-size: 40px;
     background-repeat: no-repeat;
@@ -237,10 +237,11 @@ section.cover.has-mask .mask {
 }
 /* 代码块 */
 .markdown-section pre>code {
+    /* 代码颜色 */
     color: #c0c3c1 !important;
     font-family: 'Inconsolata', consolas,"PingFang SC", "Microsoft YaHei", monospace !important;
     background-color: #282c34 !important;    
-    font-size: 15px !important;
+    font-size: 14.5px !important;
     white-space: pre !important;
     line-height: 1.5 !important;
     -moz-tab-size: 4 !important;
@@ -287,6 +288,7 @@ markdown-section code, .markdown-section pre {
     color: #98b755 !important;
 }
 .token.punctuation{
+    /* 括号颜色 */
     color: #c0c3c1 !important;
 }
 
