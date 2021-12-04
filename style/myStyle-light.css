@@ -228,7 +228,7 @@ section.cover.has-mask .mask {
     width: 100%;
     background-size: 40px;
     background-repeat: no-repeat;
-    background-color: #282c34;
+    background-color: #2b2b2b;
     margin-bottom: -7px;
     margin-top: 10px;
     margin-left: -3px;
@@ -238,9 +238,9 @@ section.cover.has-mask .mask {
 /* 代码块 */
 .markdown-section pre>code {
     /* 代码颜色 */
-    color: #c0c3c1 !important;
+    color: rgb(169, 183, 198) !important;
     font-family: 'Inconsolata', consolas,"PingFang SC", "Microsoft YaHei", monospace !important;
-    background-color: #282c34 !important;    
+    background-color: #2b2b2b !important;    
     font-size: 14.5px !important;
     white-space: pre !important;
     line-height: 1.5 !important;
@@ -251,18 +251,18 @@ section.cover.has-mask .mask {
 }
 /* 代码块 */
 markdown-section code, .markdown-section pre {
-    background-color: #282c34;
+    background-color: #2b2b2b;
 }
 .token.directive.keyword{
     color: #4faee2 !important;
 }
 
 .token.keyword{
-    color: #c678dd !important;
+    color: rgb(219, 123, 44) !important;
 }
-
+/* 注释颜色 */
 .token.comment{
-    color: #737c8b !important;
+    color: rgb(98, 151, 85) !important;
 }
 
 .token.tag{
@@ -282,20 +282,21 @@ markdown-section code, .markdown-section pre {
 }
 
 .token.function{
-    color: #e6b456 !important;
+    color: rgb(255, 206, 127) !important;
 }
 .token.string{
     color: #98b755 !important;
 }
 .token.punctuation{
     /* 括号颜色 */
-    color: #c0c3c1 !important;
+    color: #a9a9a9 !important;
 }
 
 .token.number{
-    color:#c0c3c1  !important;
+    color:rgb(104, 151, 187)!important;
 }
 
+/* 四个角的圆滑程度 */
 img, pre {
     border-radius: 8px;
 }
