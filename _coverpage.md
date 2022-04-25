@@ -4,10 +4,10 @@
 
 - 本文档是作者学习笔试面试算法以来的学习历程<br>旨在为大家提供一个算法按专项分类的刷题目录以及快速复习的文档<br>如果本文能给予您帮助，请给予github一个star支持！
 
-<!-- [![stars](https://badgen.net/github/stars/xwzbupt/AlgorithmNotes?color=4ab8a1)](https://github.com/xwzbupt/AlgorithmNotes)
-[![forks](https://badgen.net/github/forks/xwzbupt/AlgorithmNotes?color=4ab8a1)](https://github.com/xwzbupt/AlgorithmNotes) -->
+<!-- [![stars](https://badgen.net/github/stars/xwzbupt/AlgorithmNotes?color=4ab8a1)](https://github.com/xwzbupt/Notes)
+[![forks](https://badgen.net/github/forks/xwzbupt/AlgorithmNotes?color=4ab8a1)](https://github.com/xwzbupt/Notes) -->
 
-[GitHub](https://github.com/xwzbupt/AlgorithmNotes)
+[GitHub](https://github.com/xwzbupt/Notes)
 [开始阅读](?id=算法专项笔记)
 
 <!-- background image -->
